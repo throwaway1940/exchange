@@ -1,0 +1,19 @@
+[package]
+name = "exchange-cli"
+description = "Commandline tool for executing transactions"
+edition = "2018"
+keywords = [
+    "cli",
+    "csv",
+    "exchange",
+]
+license = "Apache-2.0/MIT"
+version = "0.1.0"
+
+[dependencies]
+anyhow = "1.0.40"
+csv = "1.1.6"
+env_logger = "0.8.3"
+exchange = { path = "../exchange" }
+log = "0.4.14"
+serde = { version = "1.0", features = ["derive"] }

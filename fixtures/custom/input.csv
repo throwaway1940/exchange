@@ -1,0 +1,23 @@
+type,client,tx,amount
+deposit,1,1,300.0
+deposit,2,2,200.0
+# Somebody is shopping too much..
+withdrawal,1,3,100.0
+withdrawal,1,4,100.0
+withdrawal,1,5,100.0
+withdrawal,1,6,100.0
+# Test dispute
+dispute,2,2
+resolve, 2,2
+# Ignore unknown transactions
+lottery,1,7,9999999999.9999
+# Someone actually won the lottery!
+deposit,1,8,99999999999999.9999
+# Test client locking
+chargeback,2,2
+# Once locked, a client can no longer be modified
+withdrawal,2,11,1000.0
+# Check precision
+deposit,3,9,1.12345678910
+# Ignore 
+deposit,4,10,fff
